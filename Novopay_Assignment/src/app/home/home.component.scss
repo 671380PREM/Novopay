@@ -1,0 +1,184 @@
+@import "../../assets/content/variables.scss";
+
+.align {
+  min-height: auto;
+  width: 90%;
+  margin: auto;
+  .row-align {
+    width: 85%;
+    margin: auto;
+    padding-top: 1em;
+    .prodlabel {
+      color: #000;
+      margin-top: 0em;
+      margin-bottom: 0.5em;
+      font-size: 18px;
+      padding: 0 10px 0 10px;
+      text-align: left;
+    }
+    hr.prodHr1 {
+      border: 1px solid $red;
+    }
+
+    hr.prodHr2 {
+      border: 1px solid $btn;
+    }
+
+    hr.prodHr3 {
+      border: 1px solid $green;
+    }
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.example-card {
+  border-radius: 0px !important;
+}
+
+#container {
+  position: relative;
+  top: -2px;
+}
+
+.container {
+  display: flex;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+
+.box-padding {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.box-font {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-size: 10px;
+  text-align: center;
+}
+
+.weight {
+  font-weight: 600;
+  padding-left: 0.5em;
+}
+
+.padding-bottom {
+  padding-bottom: 2em;
+}
+
+.home-text {
+  text-align: center;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.font-class {
+  height: 16px;
+}
+
+.h1-style {
+  color: #fff;
+  text-shadow: none;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.p-style {
+  color: #fff;
+  text-shadow: none;
+  width: 45%;
+  font-size: 14px;
+}
+
+.centered {
+  font-size: 30px;
+}
+
+.centeredcol {
+  position: absolute;
+  top: 10%;
+  font-size: 30px;
+  color: #ffffff;
+  width: 80%;
+}
+
+.centeredaction {
+  position: absolute;
+  top: 20%;
+  font-size: 30px;
+  color: #ffffff;
+  width: 80%;
+}
+
+.bgImgClass {
+  width: 100%;
+  height: 25em;
+}
+.pageAlignment {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.breadcumli {
+  padding-bottom: 8px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.column {
+  padding: 0.5em;
+}
+
+.prodTitle {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 0em;
+}
+.prodContent {
+  text-align: left;
+  color: grey;
+  margin-top: 0.5em;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .column {
+    padding: 0.5em;
+  }
+  #example {
+    position: absolute;
+    top: 0em;
+    padding-left: 6em;
+  }
+
+  .h1-style {
+    color: #fff;
+    text-shadow: none;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .p-style {
+    color: #fff;
+    text-shadow: none;
+    width: 45%;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../assets/content/variables.scss";
+
+.bg-light {
+    background-color: $header !important;
+    color: $white;
+    .nav-width-custom {
+        width: 50%;
+        .logged-in-user {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 0rem;
+            margin-right: 1em;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .icon-custom {
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .logo {
+            height: 40px;
+            margin-left: -1em;
+        }
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $white;
+}
+
+#app {
+    height: 100vh;
+}

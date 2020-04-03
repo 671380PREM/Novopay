@@ -1,0 +1,47 @@
+<div class='flex-container'>
+    <div class='cardClass mat-card'>
+        <div class="example-container">
+            <div class='paddingClass'>
+                <span class='headerSpacing'><img class="logoSize" src="assets/images/novopay_logo_small.png"
+                        alt="Snow"></span>
+            </div>
+            <form class="example-form" (ngSubmit)='login(loginForm)' [formGroup]="loginForm">
+
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="userName">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+
+                <div *ngIf="loginForm.controls['userName'].invalid && (loginForm.controls['userName'].dirty || loginForm.controls['userName'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="loginForm.controls['userName'].errors.required">
+                        Email is required
+                    </div>
+                    <div *ngIf="loginForm.controls['userName'].errors.pattern">
+                        Enter a valid email id
+                    </div>
+                </div>
+
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                    <mat-icon matSuffix>lock</mat-icon>
+                </mat-form-field>
+
+                <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="loginForm.controls['password'].errors.required">
+                        Password is required
+                    </div>
+                </div>
+
+                <div class="example-button-row">
+                    <button [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary"
+                        class="buttonWidth fontFamily">Sign in</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

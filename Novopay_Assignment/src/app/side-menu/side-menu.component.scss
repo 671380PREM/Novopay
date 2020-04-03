@@ -1,0 +1,28 @@
+@import "../../assets/content/variables.scss";
+
+.example-sidenav-content {
+  min-height: 100vh;
+}
+.example-sidenav {
+  background-color: $menu;
+  .sidenavList {
+    padding-top: 75%;
+    mat-icon {
+      color: $white;
+    }
+    .sidenav-item {
+      color: $white;
+      font-size: 20px;
+      .dashboard_label {
+        font-family: Segoe UI;
+        color: $white;
+        font-size: 16px;
+        margin: 10px;
+      }
+    }
+  }
+}
+.mat-drawer-container {
+  position: relative !important;
+  overflow: hidden;
+}

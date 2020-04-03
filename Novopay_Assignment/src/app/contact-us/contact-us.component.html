@@ -1,0 +1,92 @@
+<div class="row" style="width:90%;margin:auto">
+    <div class="row-align">
+        <p class='prodlabel'>Contact Us</p>
+        <hr class="prodHr" />
+    </div>
+    <div class="column">
+        <form class="example-form" (ngSubmit)='contactUs(contactForm)' [formGroup]="contactForm">
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+
+            <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="contactForm.controls['name'].errors.required">
+                    Name is required
+                </div>
+            </div>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="contactForm.controls['email'].errors.required">
+                    Email is required
+                </div>
+                <div *ngIf="contactForm.controls['email'].errors.pattern">
+                    Enter a valid email id
+                </div>
+            </div>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Mobile</mat-label>
+                <input matInput formControlName="mobile" type="text">
+                <mat-icon matSuffix>contact_phone</mat-icon>
+            </mat-form-field>
+
+            <div *ngIf="contactForm.controls['mobile'].invalid && (contactForm.controls['mobile'].dirty || contactForm.controls['mobile'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="contactForm.controls['mobile'].errors.required">
+                    Mobile no. is required
+                </div>
+                <div *ngIf="contactForm.controls['mobile'].errors.pattern">
+                    Enter valid mobile no.
+                </div>
+            </div>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Comments</mat-label>
+                <input matInput formControlName="comments">
+                <mat-icon matSuffix>mode_comment</mat-icon>
+            </mat-form-field>
+
+            <div *ngIf="contactForm.controls['comments'].invalid && (contactForm.controls['comments'].dirty || contactForm.controls['comments'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="contactForm.controls['comments'].errors.required">
+                    Comment is required
+                </div>
+            </div>
+
+            <div class="example-button-row">
+                <button [disabled]="contactForm.invalid" type="submit" mat-raised-button color="primary"
+                    class="buttonWidth fontFamily" data-toggle="modal" data-target="#myModal">Submit</button>
+            </div>
+        </form>
+        <div class="container">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>Thanks for contacting us. We will get back to you within 2 working days.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default custom-btn" data-dismiss="modal">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column1">
+        <h4 class="color-head">Mobile No./Email</h4>
+        <h6 class="color-sub-head">Mobile no : - +91 xxxxxxxxxx</h6>
+        <h6 class="color-sub-head">Email Id : - test@reply.com</h6>
+    </div>
+</div>

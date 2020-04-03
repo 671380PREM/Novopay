@@ -1,0 +1,36 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true"
+        (mouseenter)="increase()" (mouseleave)="decrease()">
+        <div class="sidenavList" id="sideNavPadding">
+            <mat-nav-list>
+
+                <mat-list-item routerLink="/home">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <div fxFlex="10"></div>
+                    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+                        <h5 class="dashboard_label">Home</h5>
+                    </div>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/contactus">
+                    <mat-icon mat-list-icon>contact_mail</mat-icon>
+                    <div fxFlex="10"></div>
+                    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+                        <h5 class="dashboard_label">Contact Us</h5>
+                    </div>
+                </mat-list-item>
+
+                <mat-list-item routerLink="/aboutus">
+                    <mat-icon mat-list-icon>info</mat-icon>
+                    <div fxFlex="10"></div>
+                    <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+                        <h5 class="dashboard_label">About Us</h5>
+                    </div>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+    <div class="example-sidenav-content">
+    </div>
+</mat-sidenav-container>

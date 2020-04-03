@@ -1,0 +1,19 @@
+<div id="app">
+  <nav class="navbar navbar-expand-sm bg-light navbar-light" *ngIf="routerUrl">
+    <ul class="navbar-nav nav-width-custom">
+      <li class="nav-item">
+
+        <a class="nav-link"><img src="assets/images/novopay_logo_small.png" class="logo"></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-width-custom">
+      <p class="logged-in-user">Welcome Prashant Prem</p>
+      <mat-icon matSuffix class="icon-custom" (click)=logout()>power_settings_new</mat-icon>
+    </ul>
+  </nav>
+
+  <div class="row" *ngIf="routerUrl">
+    <app-side-menu></app-side-menu>
+  </div>
+  <app-login *ngIf="!routerUrl"></app-login>
+</div>

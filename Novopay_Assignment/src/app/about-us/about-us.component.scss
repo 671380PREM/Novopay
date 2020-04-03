@@ -1,0 +1,134 @@
+@import "../../assets/content/variables.scss";
+
+#container {
+  position: relative;
+  top: -2px;
+  min-height: auto;
+  width: 90%;
+  margin: auto;
+  .img-size {
+    width: 100%;
+  }
+  #example {
+    position: absolute;
+    top: 2em;
+    padding-left: 6em;
+    .h1-style {
+      color: $white;
+      text-shadow: none;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .p-style {
+      color: $white;
+      text-shadow: none;
+      width: 45%;
+      font-size: 14px;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  min-height: auto;
+  width: 90%;
+  .home-text {
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  .box-padding {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 0.5em;
+    .weight {
+      font-weight: 600;
+      padding-left: 0.5em;
+    }
+  }
+
+  .box-font {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-size: 10px;
+    text-align: center;
+  }
+  .padding-bottom {
+    padding-bottom: 2em;
+  }
+  div {
+    flex: 1;
+  }
+}
+
+#example1 {
+  color: $white;
+  text-shadow: none;
+  font-size: 32px;
+  font-weight: 500;
+  background: $header;
+  margin-top: -6px;
+}
+
+.font-class {
+  height: 16px;
+}
+
+.prodlabel {
+  color: #000;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  font-size: 18px;
+  padding: 0 10px 0 10px;
+  text-align: left;
+}
+hr.prodHr {
+  border: 1px solid $header;
+}
+
+.about-us {
+  font-size: 14px;
+  color: $menu;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+}
+
+.row-align {
+  width: 85%;
+  margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #example {
+    position: absolute;
+    top: 0em;
+    padding-left: 6em;
+  }
+
+  .h1-style {
+    color: $white;
+    text-shadow: none;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .p-style {
+    color: $white;
+    text-shadow: none;
+    width: 45%;
+    font-size: 12px;
+  }
+}
